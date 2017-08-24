@@ -1,14 +1,16 @@
 /*
  * Programmer: Joseph Cuellar
  * Created: 8/22/2017
- * Last date modified: 8/23/2017
+ * Last date modified: 8/24/2017
  */
 public class Main {
 
 	public static void main(String[] jc){
 		//even_sum_fib(11);
 		//multThreeFive(10);
-		multThreeFivee(3,5,30);
+		//multThreeFivee(3,5,30);
+		largestPrimeFactor(6008);
+
 	}
 
 	/* 1.1. Multiple of 3 and 5 */
@@ -49,4 +51,27 @@ public class Main {
 		System.out.println("The sum of the even fibonacci with threshold " + threshold + " is: " + tsum);
 	}
 
+	/* 3. Largest Prime Factor */
+	public static boolean isPrime(int a){
+		if(a>2 && a%2==0){
+			return false;
+		}
+
+		for(int i=3; i<a; i+=2){
+			if(a%i == 0){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static void largestPrimeFactor(int num){
+		int pNum = 0;
+		for(int i=2; i<= num; i++){
+			if(isPrime(i) && num%i == 0){
+				pNum = i;
+			}
+		}
+		System.out.println("Largest prime factor for value " + num + " is " + pNum);
+	}
 }
