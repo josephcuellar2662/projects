@@ -10,7 +10,8 @@ public class Main {
 		//multThreeFive(10);
 		//multThreeFivee(3,5,30);
 		//largestPrimeFactor(6008);
-		largestPalProduct();
+		//largestPalProduct();
+		projectEulerFive();
 
 	}
 
@@ -99,3 +100,21 @@ public class Main {
 		}
 		System.out.println("The largest palindrome made from the product two 3-digit numbers is " + pNum);
 	}
+
+	/* 5. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? */
+	public static boolean isDivisible(int n){
+		for(int i=1; i<= 20; i++){
+			if(n%i != 0)
+				return false;
+		}
+		return true;
+	}
+
+	public static void projectEulerFive(){
+		int n=20;
+		while(!isDivisible(n++));
+		System.out.println("The smallest number that is evenly divisible by all of the numbers from 1 to 20 is " + (n-1));
+	}
+
+
+}
