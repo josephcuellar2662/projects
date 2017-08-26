@@ -1,7 +1,7 @@
 /*
  * Programmer: Joseph Cuellar
  * Created: 8/22/2017
- * Last date modified: 8/24/2017
+ * Last date modified: 8/26/2017
  */
 public class Main {
 
@@ -9,7 +9,8 @@ public class Main {
 		//even_sum_fib(11);
 		//multThreeFive(10);
 		//multThreeFivee(3,5,30);
-		largestPrimeFactor(6008);
+		//largestPrimeFactor(6008);
+		largestPalProduct();
 
 	}
 
@@ -74,4 +75,27 @@ public class Main {
 		}
 		System.out.println("Largest prime factor for value " + num + " is " + pNum);
 	}
-}
+
+	/* 4. Find the largest palindrome made from the product of two 3-digit numbers */
+	public static boolean isPalindrome(String s, int start, int end){
+		if(start > end)
+			return true;
+		if(s.length() == 0 || s.length() == 1)
+			return true;
+		if(s.charAt(start) != s.charAt(end))
+			return false;
+		return isPalindrome(s, start+1, end -1);
+	}
+
+	public static void largestPalProduct(){
+		int pNum = -1;
+		String s = "";
+		for(int i=100; i<=999; i++){
+			for(int j=100; j<=999; j++){
+				s = Integer.toString(i*j);
+				if(isPalindrome(s,0,s.length()-1) && (i*j)>pNum)
+					pNum = i*j;
+			}
+		}
+		System.out.println("The largest palindrome made from the product two 3-digit numbers is " + pNum);
+	}
