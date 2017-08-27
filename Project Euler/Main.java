@@ -12,7 +12,8 @@ public class Main {
 		//largestPrimeFactor(6008);
 		//largestPalProduct();
 		//projectEulerFive();
-		projectEulerSix(100);
+		//projectEulerSix(100);
+		projectEulerSeven(100001);
 	}
 
 	/* 1.1. Multiple of 3 and 5 */
@@ -122,6 +123,18 @@ public class Main {
 		int sum_of_squares = (n*(n+1)*(2*n+1))/6;
 		System.out.println("The difference between the sum of the square of the first one hundread natural numbers"
 				+ " and the square of the sum is " + (square_of_sum - sum_of_squares));
+	}
+
+	/* 7. What is the 10 001st prime number? */
+	public static void projectEulerSeven(int n){
+		int count = 0, pNum = 1;
+		while(count < n){
+			if(isPrime(++pNum)){
+				//System.out.println("Log: " + pNum);
+				count++;
+			}
+		}
+		System.out.println("The " + n + "th prime number is " + pNum);
 	}
 
 }
