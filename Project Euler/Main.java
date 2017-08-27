@@ -11,8 +11,8 @@ public class Main {
 		//multThreeFivee(3,5,30);
 		//largestPrimeFactor(6008);
 		//largestPalProduct();
-		projectEulerFive();
-
+		//projectEulerFive();
+		projectEulerSix(100);
 	}
 
 	/* 1.1. Multiple of 3 and 5 */
@@ -116,5 +116,12 @@ public class Main {
 		System.out.println("The smallest number that is evenly divisible by all of the numbers from 1 to 20 is " + (n-1));
 	}
 
+/* 6. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.*/
+	public static void projectEulerSix(int n){
+		int square_of_sum = (int) Math.pow((n*(n+1))/2,2);
+		int sum_of_squares = (n*(n+1)*(2*n+1))/6;
+		System.out.println("The difference between the sum of the square of the first one hundread natural numbers"
+				+ " and the square of the sum is " + (square_of_sum - sum_of_squares));
+	}
 
 }
