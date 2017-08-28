@@ -16,7 +16,8 @@ public class Main {
 		//projectEulerFive();
 		//projectEulerSix(100);
 		//projectEulerSeven(10001);
-		projectEulerEight();
+		//projectEulerEight();
+		projectEulerTen(10);
 	}
 
 	/* 1.1. Multiple of 3 and 5 */
@@ -59,11 +60,11 @@ public class Main {
 
 	/* 3. Largest Prime Factor */
 	public static boolean isPrime(int a){
-		if(a>2 && a%2==0){
+		if(a==2)return true;
+		if(a<2 || a%2==0){
 			return false;
 		}
-
-		for(int i=3; i<a; i+=2){
+		for(int i=3; i<=Math.sqrt(a); i+=2){
 			if(a%i == 0){
 				return false;
 			}
@@ -178,5 +179,17 @@ public class Main {
 			}
 
 		}
+	}
+
+	/* 10. Summation of primes below n */
+	public static void projectEulerTen(int n){
+		int sum = 0;
+		if(n > 2){ sum = 2;}
+		for(int i = 3; i<n; i+=2){
+			if(isPrime(i)){
+				sum += i;
+			}
+		}
+		System.out.println("Summation of prime numbers below " + n + " is " + sum);
 	}
 }
