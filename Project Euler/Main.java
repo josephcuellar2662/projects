@@ -338,4 +338,8 @@ public class Main {
 		}
 		return count;
 	}
+
+	/* 523. Find E(30). Give your answer rounded to two digits after the decimal point. (Refer to project euler
+	for the full description of the problem */
+
 }
