@@ -1,0 +1,75 @@
+body {
+  font-family: sans-serif;
+}
+
+input {
+  text-align: right;
+}
+
+.App {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.5em auto;
+  border-radius: .35em;
+  background: #fcfcfc;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 26px rgba(0, 0, 0, .13);
+  box-shadow: 0 0 26px rgba(0, 0, 0, .13);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 200px;
+  width: 20rem;
+  justify-content: center;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.inputField {
+  width: 20rem;
+}
+
+.numberBtn {
+  width: 5rem;
+  height: 3rem;
+}
+.numberBtn:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.operationBtn {
+  width: 5rem;
+  height: 3rem;
+}
+.operationBtn:hover {
+  background-color: coral; /* Green */
+  color: white;
+}
+
+.clearBtn {
+  width: 5rem;
+  height: 3rem;
+}
+.deleteBtn {
+  width: 5rem;
+  height: 3rem;
+}
+.clearBtn:hover,
+.deleteBtn:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.enterBtn {
+  width: 20rem;
+  height: 3rem;
+  background-color:hsl(120,100%,75%);
+}
